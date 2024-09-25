@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block bodyattribs %}
+class="enter-account-action"
+{% endblock %}
+
+{% block back_button %}
+<button onclick="goBack()" class="myButton">Go Back</button>
+{% endblock %}
+
+{% block body %}
+<h2>Text Input Form</h2>
+
+<form action="/process_email" method="post" enctype='multipart/form-data'>
+  <h1>Upload PDF File</h1>
+      <input type="file" name="pdf_file" accept="application/pdf" required>
+      <button type="submit">Upload</button>
+
+</form> 
+{% endblock %}

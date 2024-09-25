@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+{% block back_button %}
+<button onclick="goBack()" class="myButton">Go Back</button>
+{% endblock %}
+
+
+{% block body %}
+<div class="container-top-margin">
+    <a href="/feed" class="">Feed</a>
+</div>
+
+<div class="center-content entity-list">
+    <div class="add_plans">
+        <form action="/add_trip_plans/{{trip_id}}" method="GET">
+            <button class="add_plans">Add plans</button>
+        </form>
+    </div>
+    <div class="trip_plans clearfix">
+        <div class="adjust-floating-inputs">
+            <div class="half-column">
+                {% for flight in flight_list %}
+                <div class="listing-item-container">
+                    <p class="title">{{flight.airline }}</p>
+                    <p class="title">{{flight.flight_num_iata }}</p>
+                    <p class="date">{{ flight.dep_date }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="half-column">
+                {% for lodging in lodging_list %}
+                <div class="listing-item-container">
+                    <p class="title">{{lodging.lodging_type}}</p>
+                    <p class="title">{{lodging.website}}</p>
+                    <p class="title">{{lodging.price_per_night}}</p>
+                    <p class="title">{{lodging.check_in_time}}</p>
+                    <p class="title">{{lodging.check_out_time}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

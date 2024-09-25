@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My Website</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body {% block bodyattribs %}{% endblock %}>
+   {% block back_button %}{% endblock %}
+   {% block body %}{% endblock %}
+   <script>
+   function goBack() {
+      window.history.back();
+   }
+   </script>
+</body>
+</html>

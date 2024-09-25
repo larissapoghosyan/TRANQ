@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block bodyattribs %}
+class="enter-account-action"
+{% endblock %}
+
+{% block body %}
+<div class="container-top-margin">
+    <form action="/process_email" method="GET">
+        <button class="">Process Email</button>
+    </form>
+</div>
+
+{% for trip in trips %}
+<div class="center-content entity-list">
+    <a href="/list_trip_plans/{{ trip.trip_id }}" class="entity-redirect-link">
+        <!-- <div class="image-container">
+            <img src="{{ url_for('static', filename='trippin.png') }}" alt="Image">
+        </div> -->
+        <div class="listing-item-container">
+            {% if trip.trip_name %}
+            <h2 class="title">{{ trip.trip_name }}</h2>
+            {% else %}
+            <h2 class="title">No title provided</h2>
+            {% endif %}
+            <p class="date">{{ trip.date_string }}</p>
+            <div class="adjust-floating-inputs">
+                <div class="half-column trip-options">
+                    <form action="/edit_trip/{{trip.trip_id}}" method="GET">
+                        <button type="submit" class="edit">Edit</button>
+                    </form>
+                </div>
+                <div class="half-column trip-options">
+                    <form action="/delete_trip/{{trip.trip_id}}" method="POST">
+                        <button type="submit" class="delete">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </a>
+</div>
+{% endfor %}
+
+
+
+<div>
+    <form action="/new_trip" method="GET">
+        <button class="add-trip" >
+            <span class="tooltip">Add a new trip</span>
+            +
+        </button>
+    </form>
+</div>
+
+<form action="/logout" method="POST">
+    <button type="submit" class="logout">Logout</button>
+</form>
+
+{% endblock %}

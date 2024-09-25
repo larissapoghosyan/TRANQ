@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div>
+        <form action="/add_flight_info/{{trip_id}}" method="POST">
+            <div class="container-top-margin">
+
+                <div class="adjust-floating-inputs">
+                    <div class="half-column uneven-half-column">
+                        <div class="center-content flight-info clearfix">
+                            <div class="">
+                                <h3>Flight Info</h3>
+                                <label>
+                                    <input type="text" name="confirmation" class="form-input-entry"
+                                        placeholder="Confirmation">
+                                </label>
+                                <label>
+                                    <span class="form-label">Departure Date:</span>
+                                    <span class="required-label">*</span>
+                                    <input type="date" name="departure_date" class="form-input-entry" required>
+                                </label>
+                                <div class="adjust-floating-inputs">
+                                    <div class="half-column third-column">
+                                        <label>
+                                            <span class="required-label">*</span>
+                                            <input type="text" name="airline" class="form-input-entry" placeholder="Airline"
+                                                required>
+                                        </label>
+                                    </div>
+                                    <div class="half-column third-column">
+                                        <label>
+                                            <span class="required-label">*</span>
+                                            <input type="text" name="flight_num_iata" class="form-input-entry"
+                                                placeholder="Flight Number" required>
+                                        </label>
+                                    </div>
+                                    <div class="half-column third-column">
+                                        <label>
+                                            <span class="transparent-required-label-for-leveling">*</span>
+                                            <input type="text" name="seat" class="form-input-entry" placeholder="Seat">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> <!-- Closing tag for .flight-info -->
+
+                        </div>
+                    </div>
+
+                    <div class="half-column uneven-half-column">
+                        <div class="center-content flight-details">
+                            <label class="expand-checkbox-label" for="edit-flight-details-checkbox">
+                                <span class="expand-checkbox-label-span">Flight Details Manually</span>
+                            </label>
+                            <input type="checkbox" class="expand-checkbox-accordion" name="expand-checkbox-accordion"
+                                id="edit-flight-details-checkbox">
+
+                            <div class="accordion clearfix">
+                                <div class="half-column">
+                                    <div class="departure-info">
+                                        <h3>Departure</h3>
+                                        <div>
+
+                                            <input type="text" id="airport" class="form-input-entry" placeholder="Airport">
+
+                                            <div>
+                                                <label for="departure-time">
+                                                    <span class="form-label">
+                                                        Departure Time
+                                                    </span>
+                                                </label>
+                                                <input type="time" id="departure-time" class="form-input-entry"
+                                                    name="departure-time">
+                                            </div>
+                                            <div class="adjust-floating-inputs">
+                                                <div class="half-column">
+                                                    <input type="text" id="departure-terminal" class="form-input-entry"
+                                                        name="departure-terminal" placeholder="Terminal">
+                                                </div>
+                                                <div class="half-column">
+                                                    <input type="text" id="departure-gate" class="form-input-entry"
+                                                        name="departure-gate" placeholder="Gate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="half-column">
+                                    <div class="arrival-info">
+                                        <h3>Arrival</h3>
+                                        <div>
+                                            <div>
+                                                <input type="text" id="airport" class="form-input-entry"
+                                                    placeholder="Airport">
+                                            </div>
+
+                                            <div class="adjust-floating-inputs">
+                                                <div class="half-column">
+                                                    <label for="arrival-date">
+                                                        <span class="form-label">
+                                                            Arrival Date
+                                                        </span>
+                                                    </label>
+                                                    <input type="date" id="arrival-date" class="form-input-entry"
+                                                        name="arrival-date">
+                                                </div>
+                                                <div class="half-column">
+                                                    <label for="arrival-time">
+                                                        <span class="form-label">
+                                                            Arrival Time
+                                                        </span>
+                                                    </label>
+
+                                                    <input type="time" id="arrival-time" class="form-input-entry"
+                                                        name="arrival-time">
+                                                </div>
+                                            </div>
+
+                                            <div class="adjust-floating-inputs">
+                                                <div class="half-column">
+                                                    <input type="text" id="arrival-terminal" class="form-input-entry"
+                                                        name="arrival-terminal" placeholder="Terminal">
+                                                </div>
+                                                <div class="half-column">
+                                                    <input type="text" id="arrival-gate" class="form-input-entry"
+                                                        name="arrival-gate" placeholder="Gate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="aircraft-details">
+                                <label class="expand-checkbox-label" , for="edit-aircraft-info-checkbox">
+                                    <span class="expand-checkbox-label-span">Aircraft Service Info</span>
+                                </label>
+                                <input type="checkbox" class="expand-checkbox-accordion" name="expand-checkbox-accordion"
+                                    id="edit-aircraft-info-checkbox">
+                                <div class="accordion clearfix">
+                                    <div class="half-column third-column">
+                                        <h3>Aircraft</h3>
+
+                                        <div>
+                                            <div class="adjust-input-width">
+                                                <div class="half-column">
+                                                    <input type="text" id="aircraft-model" class="form-input-entry"
+                                                        name="aircraft-model" placeholder="Aircraft">
+                                                </div>
+                                                <div class="half-column">
+                                                    <input type="text" id="fare-class" class="form-input-entry"
+                                                        name="fare-class" placeholder="Fare Class">
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <input type="text" id="aircraft-meal" class="form-input-entry"
+                                                    name="aircraft-meal" placeholder="Meal">
+                                            </div>
+
+                                            <div>
+
+                                                <input type="text" id="aircraft-entertainment" class="form-input-entry"
+                                                    name="aircraft-entertainment" placeholder="Entertainment">
+                                            </div>
+
+                                            <div>
+                                                <input type="text" id="aircraft-stops" class="form-input-entry"
+                                                    name="aircraft-stops" placeholder="Stops">
+                                            </div>
+                                            <div class="half-column">
+                                                <label for="aircraft-distance">
+                                                    <span class="form-label">
+                                                        Distance
+                                                    </span>
+                                                </label>
+
+                                                <input type="text" id="aircraft-distance" class="form-input-entry"
+                                                    name="aircraft-distance" placeholder="Distance">
+                                            </div>
+                                            <div class="adjust-input-width">
+                                                <div class="half-column">
+                                                    <label for="aircraft-on-time">
+                                                        <span class="form-label">
+                                                            On Time %
+                                                        </span>
+                                                    </label>
+
+                                                    <input type="text" id="aircraft-on-time" class="form-input-entry"
+                                                        name="aircraft-on-time" placeholder="On Time %">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="save-flight-info-cont">
+                <button type="submit" class="save-flight-info">Save</button>
+            </div>
+
+        </form>
+
+        <form action="/list_trip_plans/{{trip_id}}" method="GET">
+            <button type="submit" class="cancel">Cancel</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

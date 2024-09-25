@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+<div class="center-content">
+    <div class="">
+        <form action="/edit_trip/{{trip.trip_id}}" method="POST" class="add-trip-info">
+            <input type="text" name="trip_name" class="form-input-entry trip-info-entry" placeholder="Trip Name" value="{{trip.trip_name}}">
+            <div class="adjust-floating-inputs">
+                <div class="half-column">
+                    <label>
+                        <span class="form-label">Start Date:</span>
+                        <input type="date" name="start_date" class="form-input-entry trip-info-entry" value="{{trip.start_date}}" required>
+                    </label>
+                </div>
+                <div class="half-column">
+                    <label>
+                        <span class="form-label">End Date:</span>
+                        <input type="date" name="end_date" class="form-input-entry trip-info-entry" value="{{trip.end_date}}" required>
+                    </label>
+                </div>
+            </div>
+            <input type="text" name="destination" class="form-input-entry trip-info-entry" placeholder="End Destination" value="{{trip.destination}}" required>
+            <input type="text" name="origin" class="form-input-entry trip-info-entry" placeholder="Origin" value="{{trip.origin}}" required>
+            <input type="text" name="trip_description" class="form-input-entry trip-info-entry" placeholder="Trip Description" value="{{trip.description}}">
+            <select name="trip_status" class="form-input-entry trip-info-entry">
+                <option value="" {% if trip.trip_status == "" %} selected {% endif %}>Add Trip status...</option>
+                <option value="planned" {% if trip.trip_status == "planned" %} selected {% endif %}>Planned</option>
+                <option value="in_progress" {% if trip.trip_status == "in_progress" %} selected {% endif %}>In Progress</option>
+                <option value="completed" {% if trip.trip_status == "completed" %} selected {% endif %}>Completed</option>
+                <option value="cancelled" {% if trip.trip_status == "cancelled" %} selected {% endif %}>Cancelled</option>
+            </select>
+
+
+
+            <!-- <div class="adjust-floating-inputs"> -->
+                <div class="account-action">
+                    <div class="half-column">
+                        <button type="submit" class="save">Save</button>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </form>
+
+        <div class="half-column">
+            <form action="/feed" method="GET">
+                    <button type="submit" class="cancel">Cancel</button>
+            </form>
+        </div>
+
+        
+    </div>
+</div>
+
+{% endblock %}

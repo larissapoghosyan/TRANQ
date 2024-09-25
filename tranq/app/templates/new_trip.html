@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+<div class="center-content">
+    <div class="">
+        <form action="/new_trip" method="POST" class="add-trip-info">
+            <input type="text" name="trip_name" class="form-input-entry trip-info-entry" placeholder="Trip Name">
+            <div class="adjust-floating-inputs">
+                <div class="half-column">
+                    <label>
+                        <span class="form-label">Start Date:</span>
+                        <input type="date" name="start_date" class="form-input-entry trip-info-entry" required>
+                    </label>
+                </div>
+                <div class="half-column">
+                    <label>
+                        <span class="form-label">End Date:</span>
+                        <input type="date" name="end_date" class="form-input-entry trip-info-entry" required>
+                    </label>
+                </div>
+            </div>
+            <input type="text" name="destination" class="form-input-entry trip-info-entry" placeholder="End Destination"
+                required>
+            <input type="text" name="origin" class="form-input-entry trip-info-entry" placeholder="Origin" required>
+            <input type="text" name="trip_description" class="form-input-entry trip-info-entry"
+                placeholder="Trip Description">
+            <select name="trip_status" class="form-input-entry trip-info-entry">
+                <option value="">Add Trip status...</option>
+                <option value="planned">Planned</option>
+                <option value="in_progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+
+
+            
+            <!-- <div class="adjust-floating-inputs"> -->
+                <div class="account-action">
+                    <div class="half-column">
+                        <button type="submit" class="save">Save</button>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </form>
+
+        <div class="half-column">
+            <form action="/feed" method="GET">
+                    <button type="submit" class="cancel">Cancel</button>
+            </form>
+        </div>
+
+
+
+
+        
+    </div>
+</div>
+
+{% endblock %}

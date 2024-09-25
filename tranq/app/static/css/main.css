@@ -1,0 +1,637 @@
+body {
+    font-family: system-ui;
+}
+
+body.enter-account-action {
+    background-color: rgb(231, 234, 241);
+}
+
+div.center-content {
+    background-color: white;
+}
+
+div.entity-list {
+    width: 800px;
+    margin: 15px auto;
+    /* height: 170px; */
+    padding: 20px;
+
+}
+
+div.entity-list:first-child{
+    margin-top: 100px;
+}
+
+h3 {
+    color: #06065bf0;
+}
+
+h1.centered, h2.centered, h3.centered {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.container-top-margin {
+    margin-top: 20px;
+}
+
+form.data-submit {
+    padding-bottom: 10px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+form.data-submit:last-child {
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+
+form.add-trip-info{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+input {
+    margin: auto;
+    display: block;
+    margin-bottom: 14px;
+    /* margin-top: 12px; */
+    background-color: #f9f9f9;
+    color: #353333;
+
+}
+
+label {
+    display: block;
+}
+
+.half-column {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0px 5px;
+}
+
+.half-column:first-child {
+    padding-left: 0px;
+}
+
+.half-column:last-child {
+    padding-right: 0;
+}
+
+.trip-options {
+    width: 50px;
+}
+
+.third-column{
+    width: 33%;
+}
+
+.uneven-half-column {
+    margin-left: 0px;
+    width: 60%;
+}
+
+.uneven-half-column:first-child {
+    margin-left: 10px;
+    width: 35%;
+}
+
+
+/*       ******************************** ********************************  ********************************       */
+
+/* WebKit browsers like Chrome, Safari and Opera */
+/* ::-webkit-input-placeholder {
+    text-align: center;
+} */
+
+/* Firefox */
+/* ::-moz-placeholder {
+    text-align: center;
+} */
+
+/* Internet Explorer 10+ */
+/* :-ms-input-placeholder {
+    text-align: center;
+} */
+
+/* Microsoft Edge */
+/* ::-ms-input-placeholder {
+    text-align: center;
+} */
+/*       ******************************** ********************************  ********************************       */
+
+.container {
+    margin: auto;
+    position: relative;
+}
+
+.center-content {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 1px #00000021;
+
+}  
+
+.flight-info-div {
+
+    /* padding: 40px 25px;
+    box-shadow: 0px 0.3px 0.3px 0.8px #00000021; */
+    /* width: 550px; */
+}
+
+.flight-info {
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0px 0.3px 0.3px 0.8px #00000021;
+    /* margin-left: 20px; */
+}
+
+.flight-details {
+    width: 650px;
+    padding: 40px 50px;
+    box-shadow: 0px 0.3px 0.3px 0.8px #00000021;
+    /* margin-left: 51px; */
+    margin-right: -20px;
+}
+
+.center-form-container {
+    /* text-align: center; */
+    width: 100%;
+    padding: 30px;
+}
+
+/* .new-trip-container {
+    width: 500px;
+    height: 600px;
+} */
+
+.auth-form-container {
+    margin: 0 auto;
+    width: 370px;
+    padding-top: 20px;
+}    
+
+.account-action {
+    padding-top: 20px;
+    /* width: 100%; */
+}   
+
+.form-input-entry {
+    width: 100%;
+
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    box-shadow:  0px 0px 0px 0px #00000000, 0px 1px 5px 1px #0000000a inset;
+    
+    transition: all 0.1s ease-out;
+
+    margin: 10px 0px;
+
+    box-sizing: border-box;
+
+}
+
+.form-input-entry:focus, .form-input-entry:focus-visible {
+    border: 1px solid #0073ff;
+    box-shadow: 0px 0px 0px 3px #0173ff40, 0px 1px 5px 1px #00000021 inset;
+}
+
+.trip-info-entry {
+    height: 40px;
+    /* margin: 15px 0px */
+}
+
+.form-label {
+    padding-left: 5px;
+    color: #535151;
+    font-size: 14px;
+}
+
+
+
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+
+input[type="date"]:hover, input[type="time"]:hover {
+    border-color: #999;
+}
+
+
+select {
+    color: #535151;
+}
+
+/* select:hover {
+    border-color: #999;
+}
+
+select:focus {
+    border-color: #555;
+    outline: none;
+} */
+
+option {
+    color: #535151;
+}
+
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+} */
+
+
+/*       ******************************** ********************************  ********************************       */
+
+
+
+
+
+/*       ******************************** ********************************  ********************************       */
+button {
+    position: relative;
+    padding: 15px 32px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ebedf3;
+
+    color: #1b1a1abb;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px #00000059, 0px 1px 1px #ffffff54 inset, 0px -1px 1px rgba(0,0,0,0.1) inset;
+    text-shadow: 0px 0.5px 0.5px #00000066;
+}
+
+button:hover {
+    background-color: #ced1dc;
+}
+
+button:active {
+    box-shadow: 0px 0px 5px #00000059, 0px -1px 1px #ffffff54 inset, 0px 1px 1px rgba(0,0,0,0.1) inset;
+    padding-top: 16px;
+    padding-bottom: 14px;
+}
+/*       ******************************** ********************************  ********************************       */
+
+
+button.signup {
+    position: relative;
+    margin: auto;
+    /* border-radius: 5px; */
+    width: 100%;
+    background-color: #199d1e;
+    color: white;
+
+    text-shadow: 0px 1px 1px #00000066;
+}
+
+button.signup:hover {
+    background-color: #287e2b;
+}
+
+button.login{
+    position: relative;
+    margin: auto;
+    /* border-radius: 5px; */
+    width: 100%;
+    color: white;
+    background-color: #0740d1e0;
+
+    text-shadow: 0px 1px 1px #00000066;
+
+}
+
+button.login:hover {
+    background-color: #263b90;
+}
+
+
+button.logout {
+    position: fixed;
+    margin: auto;
+    top: 20px;
+    right: 20px;
+    background-color: #04124c;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    text-shadow: 0px 1px 1px #00000066;
+}
+
+button.logout:hover {
+    background-color: #20389a;
+}
+
+
+button.save {
+    position: relative;
+    width: auto;
+    margin:auto;
+    max-width: 120px;
+    min-width: 100px;
+    border-radius: 10px;
+    background-color: #46bc4a;
+    color: white;
+
+}
+
+button.save:hover {
+    background-color: #94d396;
+}
+
+button.cancel {
+    position: relative;
+    width: auto;
+    margin:auto;
+    max-width: 120px;
+    min-width: 100px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: rgba(24, 26, 24, 0.797);
+
+
+    border: 0.5px solid rgba(7, 7, 7, 0.057);
+    box-shadow: 0px 0px 2px #00000059, 0px 1px 1px #ffffff54 inset, 0px -1px 1px rgba(0,0,0,0.1) inset;
+    text-shadow: 0px 0.5px 0.5px #00000066;
+}
+
+button.cancel:hover {
+    background-color: #ced1dc;
+}
+
+button.edit, button.delete {
+    position: relative;
+    width: auto;
+    height: 17px;
+    margin: auto;
+    max-width: 50px;
+    min-width: 20px;
+    padding: 2px 8px;
+    font-size: 10px;
+    border-radius: 7px;
+    background-color: #9bbfcb10;
+    color: #0f16199f;
+
+    margin-top: 10px;
+
+
+    border: 1px solid rgba(27, 26, 26, 0.057);
+    box-shadow: 0px 0px 0.3px #4c4b4b59, 0px 1px 1px #ffffff54 inset, 0px -1px 1px rgba(0, 0, 0, 0.1) inset;
+    text-shadow: 0px 0.1px 0.1px #00000066;
+}
+
+button.edit:hover, button.delete:hover {
+    background-color: #e5e7ec71;
+}
+
+button.edit:active, button.delete:active {
+    box-shadow: 0px 0px 0.5px #00000059, 0px -1px 1px #ffffff54 inset, 0px 1px 1px rgba(0,0,0,0.1) inset;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+button.add_flight, button.add_lodging, button.add_activity {
+    position: relative;
+    width: auto;
+    margin:auto;
+    max-width: 115px;
+    min-width: 50px;
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: #164edce0;
+
+    color: white;
+}
+
+button.add_flight:hover, button.add_lodging:hover, button.add_activity:hover {
+    background-color: rgba(18, 49, 173, 0.84);
+}
+
+
+.save-flight-info-cont {
+    /* display: flex; */
+    /* clear: both;
+    margin: 30px;
+    padding-top: 42px;
+    margin-left: 1130px; */
+}
+
+button.save-flight-info {
+    /* position: relative; */
+    /* clear: both; */
+    /* margin-left: auto; */
+    /* margin-right: 50px; */
+}
+
+.save-flight-info-cont {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+
+button.save-flight-info:hover {
+    
+}
+
+button.save-flight-info:active {
+
+}
+
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+
+.required-label {
+    color: red;
+    float: left;
+  }
+
+  .transparent-required-label-for-leveling {
+    color:#ffffff00;
+    float: left;
+  }
+
+
+/*       ******************************** ********************************  ********************************       */
+trip-plans-link {
+    display: flex;
+    width: 800;
+    text-decoration: none;
+    color: rgb(35, 34, 34)
+}
+
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+
+
+button.add-trip {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px #00000059, 0px 1px 1px #ffffff54 inset, 0px -1px 1px rgba(0,0,0,0.1) inset;
+    text-shadow: 0px 1px 1px #00000066;
+    padding: 2px 2px;
+  }
+  button.add-trip:hover {
+    background-color: #94d396;
+  }
+  button.add-trip:active {
+    box-shadow: 0px 0px 10px #00000059, 0px -1px 1px #ffffff54 inset, 0px 1px 1px rgba(0,0,0,0.1) inset;
+    padding-top: 3px;
+  }
+
+.tooltip {
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    right: 56px;
+    top: 50%;
+    line-height: 20px;
+    margin-top: -15px;
+    
+    font-size: 12px;
+    white-space: nowrap;
+
+    display: none;
+}
+
+button.add-trip:hover .tooltip {
+    opacity: 0.7;
+    display: block;
+}
+
+
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+/*       ******************************** ********************************  ********************************       */
+
+.entity-redirect-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(35, 34, 34)
+}
+
+.listing-item-container {
+    white-space: nowrap;
+    width: 800px;
+    margin: 0px 20px;
+    padding: 0px 50px
+}
+
+/* .entity-list-container{
+    margin-top: 100px;
+} */
+
+.select-trip-opt {
+    font-size: 10px;
+    text-wrap: balance;
+    width: 87px;
+    border-radius: 7px;
+
+    background-color: #9bbfcb10;
+    color: #0f16199f;
+    cursor: pointer;
+    
+    border: 1px solid rgba(27, 26, 26, 0.057);
+    box-shadow: 0px 0px 0.3px #4c4b4b59, 0px 1px 1px #ffffff54 inset, 0px -1px 1px rgba(0, 0, 0, 0.1) inset;
+    text-shadow: 0px 0.1px 0.1px #00000066;
+
+}
+
+.accordion{
+    display: none;    
+}
+
+.expand-checkbox-accordion{
+    visibility: hidden;
+}    
+
+.expand-checkbox-accordion:checked + .accordion{
+    display: block;
+}
+
+/* .expand-checkbox-accordion:checked ~ .expand-checkbox-label span {
+    display: none;
+} */
+
+.expand-checkbox-label {
+    clear: both;
+}
+
+.expand-checkbox-label:hover{
+    cursor: pointer;
+
+}
+
+.expand-checkbox-label:hover span {
+    text-shadow: 0.5px 0px 0px rgb(4, 12, 118);
+    color: rgb(5, 11, 105);
+  }
+
+.expand-checkbox-label-span{
+    color: rgb(4, 10, 99);
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.adjust-floating-inputs {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+
+.departure-info, .arrival-info {
+    padding: 20px;
+}
+
+
+.trip_plans {
+    padding: 25px;
+}
+
+.add_plans {
+    top: 10px;
+    left: 25px;
+}

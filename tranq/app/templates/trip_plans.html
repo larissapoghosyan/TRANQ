@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+{% block back_button %}
+<button onclick="goBack()" class="myButton">Go Back</button>
+{% endblock %}
+
+
+{% block body %}
+<div class="center-content">
+    <div class="">
+
+        <h3>Add summary of trip and plans or write -> no plans</h3>
+        <div class="adjust-floating-inputs">
+            <div class="half-column third-column">
+                <form action="/add_flight_info/{{trip_id}}" method="GET">
+                    <!-- Flights -->
+                    <button class="add_flight">Flight</button>
+                </form>
+            </div>
+            <div class="half-column third-column">
+                <form action="/add_lodging_info/{{trip_id}}" method="GET">
+                    <!-- Lodgong -->
+                    <button class="add_lodging">Lodging</button>
+                </form>
+            </div>
+            <div class="half-column third-column">
+                <form action="/add_plans/{{trip_id}}" method="GET">
+                    <!-- Activity -->
+                    <button class="add_activity">Activity</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

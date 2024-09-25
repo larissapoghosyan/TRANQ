@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block bodyattribs %}
+class="enter-account-action"
+{% endblock %}
+
+{% block body %}
+<div class = "center-content">
+    <div class="auth-form-container">
+
+            <form action="/signup" method="POST" autocomplete="off" class="data-submit">
+                <h1 class="centered">Sign Up</h1>
+                <div class="adjust-floating-inputs">
+                    <div class="half-column">
+                        <input type="text" name="first_name" class="form-input-entry" placeholder="First Name">
+                    </div>
+                    <div class="half-column">
+                        <input type=" text" name="last_name" class="form-input-entry" placeholder="Last Name">
+                    </div>
+                </div>
+                
+                <input type="text" name="email" class="form-input-entry" placeholder="Email" required>
+                
+                <input type="text" name="username" class="form-input-entry" placeholder="Username" required>
+                
+                <input type="password" name="password" class="form-input-entry" placeholder="Password" autocomplete="new-password" required>
+                
+                <div class="account-action">
+                    <button type="submit" class="signup">Sign Up</button>
+                </div>
+            </form>
+
+            <form action="/" method="GET" class="data-submit">
+                <div class="account-action">
+                    <h3 class="centered">Log in to your Account</h3>
+                    <button type="submit" class="login">Login</button>
+                </div>
+             </form>
+    </div>
+</div>
+{% endblock %}
